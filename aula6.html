@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays(Methods) in JS</h1>
+    <strong>Concat</strong>
+    <script>
+        var array1 = new Array("Vermelho", 10, 24.6);
+        var array2 = new Array("Azul", 20, 40.4, array1);
+
+        document.write("<p>Array 1:" + array1 + "</p>");
+        document.write("<p>Array 1 Lenght:" +array1.length+"</p>");
+        array1 = array1.concat(array2); //concatena array
+        document.write("<p>Array 2:" + array2 + "</p>");
+        document.write("<p>Array 1 (concat):" + array1 + "</p>");
+
+        document.write("<p>Array 1 Lenght:" +array1.length+"</p>");
+        console.log(array1);
+
+    </script>
+    <strong>join()</strong>
+    <script>
+        var array1 = new Array("Vermelho", 10, 24.6);
+        var array2 = new Array("Azul", 20, 40.4, array1);
+        document.write("<p>Array 2: " + array2 + "</p>");
+        var lista = array2.join(" - "); // muda separação do array
+        document.write("<p>Array 2 (join): " + lista + "</p>");
+        console.log(array1);
+    </script>
+    <strong>push()</strong>
+    <script>
+        var array1 = new Array("Vermelho", 10, 24.6);
+        document.write("<p>Array 1: " + array1 + "</p>");
+        array1.push("novoElemento"); //adiciona elemento
+        document.write("<p>Array 1 (push): " + array1 + "</p>");
+        console.log(array1);
+    </script>
+      <strong>pop()</strong>
+      <script>
+          var array1 = new Array("Vermelho", 10, 24.6, "novoElemento");
+          document.write("<p>Array 1: " + array1 + "</p>");
+          array1.pop(); //remove ultimo elemento
+          document.write("<p>Array 1 (pop): " + array1 + "</p>");
+          console.log(array1);
+      </script>
+       <strong>shift()</strong>
+       <script>
+           var array1 = new Array("Vermelho", 10, 24.6, "novoElemento");
+           document.write("<p>Array 1: " + array1 + "</p>");
+           array1.shift(); //remove primeiro elemento
+           document.write("<p>Array 1 (pop): " + array1 + "</p>");
+           console.log(array1);
+       </script>
+</body>
+</html>

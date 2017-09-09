@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays(Lenght) in JS</h1>
+    <script>
+        var array1 = new Array("Vermelho", 10, 24.6);
+        var array2 = new Array("Azul", 20, 40.4, array1);
+        var array3 = ["Verde", 30, 50.5, array1, array2];
+
+        document.write("<p>Array 1: " + array1.length + "</p>");
+        document.write("<p>Array 2: " + array2.length + "</p>");
+        document.write("<p>Array 3: " + array3.length + "</p>");
+
+    </script>
+    <h1>Arrays(Remove Elements) in JS</h1>
+    <script>
+
+        array1.length = 2;
+
+        document.write("<p>Array 1: " + array1[0] + "</p>");
+        document.write("<p>Array 1: " + array1[1] + "</p>");
+        document.write("<p>Array 1: " + array1[2] + "</p>");
+
+    </script>
+</body>
+</html>
