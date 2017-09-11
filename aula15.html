@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Funções</h1>
+
+    <p>Testes: </p>
+    <script>
+      function somar (a,b){
+          return parseInt(a) + parseInt(b);
+      }
+      document.write("<p>somar(5,4) = " + somar(5,4) + "</p>");
+
+      var fatorial = function (n){
+        var fac = 1;
+        for(var y = n; y>= 1 ; y--){
+            fac *= y;
+        }
+        return fac;
+      };
+      document.write("<p>fatorial(4) = " + fatorial(4) + "</p>");
+    </script>
+ 
+</body>
+</html>

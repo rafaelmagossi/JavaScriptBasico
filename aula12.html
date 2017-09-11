@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Switch</title>
+</head>
+<body>
+    <h1>Switch in JS</h1>
+    <p>Teste Simples: </p>
+    <script>
+        var cor = "Vermelho";
+        switch (cor) {
+            case "Laranja":
+                document.write("Cor: Laranja");
+                break;
+            case "Azul":
+                document.write("Cor: Azul");
+                break;
+            case "Vermelho":
+                document.write("Cor: Vermelha");
+                break;
+            default:
+                document.write("Nao foi encontrada essa cor");
+        }
+    </script>
+    <p>Teste Avançado: </p>
+    <input type="text" id="peso" placeholder="Peso">
+    <br/>
+    <select id="frutas">
+        <option value="maca">Maça</option>
+        <option value="melancia">Melancia</option>
+        <option value="limao">Limão</option>
+    </select>
+    <br/>
+    <button onclick="balanca();">Pesar</button>
+    <br/>
+    <span id="resultado"></span>
+    <script>
+        function balanca() {
+            var frutas = document.getElementById("frutas").value;
+            var peso = document.getElementById("peso").value;
+            if (!peso) { //se estiver nulo ou vazio
+                document.getElementById("resultado").innerHTML = "Por favor digite um Peso";
+                return;
+            }
+            switch (frutas) {
+                case "maca":
+                    document.getElementById("resultado").innerHTML = "$ " + peso * 0.35;
+                    break;
+                case "melancia":
+                    document.getElementById("resultado").innerHTML = "$ " + peso * 0.59;
+                    break;
+                case "limao":
+                    document.getElementById("resultado").innerHTML = "$ " + peso * 0.16;
+                    break;
+                default:
+                    document.getElementById("resultado").innerHTML = "Produtos nao registrados";
+                    break;
+
+
+            }
+
+
+        }
+    </script>
+</body>
+</html>
