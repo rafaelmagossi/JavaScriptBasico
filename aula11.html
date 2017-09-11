@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>If e Else</title>
+</head>
+<body>
+    <h1>If e Else in JS</h1>
+    <p>Teste Simples: </p>
+    <script>
+        if (3 > 2) {
+            document.write("Verdadeiro");
+        } else {
+            document.write("Falso");
+        }
+    </script>
+    <p>Calculadora: </p>
+    <script>
+       function calculatora (a,b,operador){
+            if(operador == "+"){
+                return a + b;
+            }else if(operador == "-"){
+                return a - b;
+            }else if(operador == "*"){
+                return a * b;
+            }else{
+                return a / b;
+            }
+       }
+       document.write(calculatora(5,4,"*"));
+    </script>
+    <p>Calculadora de Troco: </p>
+    <script>
+       function troco (valor, dinheiro){
+            if(valor > dinheiro){
+                return "Erro -> valor > dinheiro"
+            }
+            return "troco - $ "+ (dinheiro - valor);
+       }
+       document.write(troco(15.43,20));
+    </script>
+</body>
+</html>

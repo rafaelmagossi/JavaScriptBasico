@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Arrays in JS</h1>
+    <strong>indexOf()</strong>
+    <script>
+        var array1 = ["Laranja", "Azul", "Vermelha", "Azul", "Verde"];
+        document.write("<p>Array 1: " + array1 + "</p>");
+        var retorno = array1.indexOf("Azul"); //retorna posicao, caso nao encontrar retorna -1
+        document.write("<p>Retorno: " + retorno + " Valor: " + array1[retorno] + "</p>");
+        console.log(retorno);
+    </script>
+    <strong>indexOf(searchElement, fromIndex)</strong>
+    <script>
+        var array1 = ["Laranja", "Azul", "Vermelha", "Azul", "Verde"];
+        document.write("<p>Array 1: " + array1 + "</p>");
+        var retorno = array1.indexOf("Azul", 2); //retorna posicao a partir de um index inicial, caso nao encontrar retorna -1
+        document.write("<p>Retorno: " + retorno + " Valor: " + array1[retorno] + "</p>");
+        console.log(retorno);
+    </script>
+    <strong>lastIndexOf()</strong>
+    <script>
+        var array1 = ["Laranja", "Azul", "Vermelha", "Azul", "Verde"];
+        document.write("<p>Array 1: " + array1 + "</p>");
+        var retorno = array1.lastIndexOf("Azul"); //retorna posicaopercorendo da direita para esquerda, caso nao encontrar retorna -1
+        document.write("<p>Retorno: " + retorno + " Valor: " + array1[retorno] + "</p>");
+        console.log(retorno);
+    </script>
+    <strong>lastIndexOf(searchElement, fromIndex)</strong>
+    <script>
+        var array1 = ["Laranja", "Azul", "Vermelha", "Azul", "Verde"];
+        document.write("<p>Array 1: " + array1 + "</p>");
+        var retorno = array1.lastIndexOf("Azul", 2); //retorna posicaopercorendo da direita para esquerda partir de um index inicial, caso nao encontrar retorna -1
+        document.write("<p>Retorno: " + retorno + " Valor: " + array1[retorno] + "</p>");
+        console.log(retorno);
+    </script>
+    <strong>Busca na Pratica</strong>
+    <br/>
+    <input type="text" id="busca">
+    <button onclick="buscar();">buscar</button>
+    <br/>
+    <strong>Resultado: </strong>
+    <br/>
+    <span id="resultado"></span>
+
+    <script>
+        function buscar() {
+            var array = ["um conteudo do blog", "noticias de um artigo", "receita para um bolo", "tipos de programacao"];
+            var busca = document.getElementById("busca").value;
+            var testeChave = null;
+            var resultado = "";
+            for (var chave in array) {
+                var auxArray = array[chave].split(" ");
+                for (var chave2 in auxArray) {
+                    if (auxArray.indexOf(busca) > -1) {
+                        if (testeChave != chave) {
+                            testeChave = chave;
+                            resultado += "<p>" + array[chave] + "</p>";
+                        }
+                    }
+                }
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>

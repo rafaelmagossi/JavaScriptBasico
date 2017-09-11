@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Arrays(Methods) in JS</h1>
+    <strong>unshift()</strong>
+    <script>
+        var array1 = new Array("Vermelho", 10, 24.6);
+        document.write("<p>Array 1: " + array1 + "</p>");
+        array1.unshift("novoElemento"); //adiciona elemento no inicio
+        document.write("<p>Array 1 (unshift): " + array1 + "</p>");
+        console.log(array1);
+    </script>
+    <strong>slice()</strong>
+    <script>
+        var array1 = new Array("Vermelho", 10, 24.6, "novoElemento");
+        document.write("<p>Array 1: " + array1 + "</p>");
+        var newArray = array1.slice(1, 3); //cria novo array a partir de um ja criado
+        document.write("<p>newArray (slice): " + newArray + "</p>");
+        console.log(newArray);
+    </script>
+    <strong>splice()</strong>
+    <script>
+        var array1 = new Array("Vermelho", 10, 24.6, "novoElemento");
+        document.write("<p>Array 1: " + array1 + "</p>");
+        array1.splice(1, 2, "A", "B", "C", "D"); //remove os elementos e insere no lugar
+        document.write("<p>newArray (splice): " + array1 + "</p>");
+        console.log(array1);
+    </script>
+    <strong>reverse()</strong>
+    <script>
+        var array1 = new Array("Vermelho", 10, 24.6, "novoElemento");
+        document.write("<p>Array 1: " + array1 + "</p>");
+        array1.reverse(); //reverte array
+        document.write("<p>newArray (reverse): " + array1 + "</p>");
+        console.log(array1);
+    </script>
+</body>
+
+</html>

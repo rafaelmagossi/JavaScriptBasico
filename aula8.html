@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Arrays(Methods) in JS</h1>
+    <strong>sort()</strong>
+    <script>
+        var array1 = new Array(5, 3, 4, 2, 0, 1);
+        document.write("<p>Array 1: " + array1 + "</p>");
+        array1.sort(); //ordena crescente por padrao
+        document.write("<p>Array 1 (sort): " + array1 + "</p>");
+        console.log(array1);
+    </script>
+    <strong>sort() callback</strong>
+    <script>
+        var array1 = new Array(5, 3, 4, 2, 0, 1);
+        document.write("<p>Array 1: " + array1 + "</p>");
+
+        function desc(a, b) {
+            if (a > b) {
+                return -1;
+            }
+            if (a < b) {
+                return 1;
+            }
+            if (a == b) {
+                return 0;
+            }
+        }
+        array1.sort(desc); //ordena decresente
+        document.write("<p>Array 1 (sort): " + array1 + "</p>");
+        console.log(array1);
+    </script>
+</body>
+
+</html>
